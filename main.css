@@ -1,0 +1,51 @@
+body {
+  background: #000;
+  color: #fff; }
+
+header {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #fff; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+main {
+  width: 80%;
+  margin: 0 auto; }
+  main .week-days {
+    display: flex;
+    width: 100%;
+    text-align: center; }
+    main .week-days p {
+      width: calc(100%/7); }
+  main ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    main ul li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(100%/7);
+      height: 10vh;
+      cursor: pointer;
+      border: 1px solid transparent;
+      box-sizing: border-box;
+      margin: 0; }
+      main ul li:hover {
+        color: #577513; }
+    main ul .other-date {
+      color: #4A4845; }
+    main ul .selected {
+      border: 1px solid #577513; }
+
+/*# sourceMappingURL=main.css.map */
