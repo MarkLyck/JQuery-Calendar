@@ -1,6 +1,7 @@
 var $year = $('#year');
 var $month = $('#month');
 var $dates = $('.dates');
+var $otherDate = $('.other-date');
 
 var today = new Date();
 var year = today.getFullYear();
@@ -65,9 +66,9 @@ function getPrevMonth() {
   updateCalendar();
 }
 
-$dates.on('click', function(){
-  $dates.removeClass('selected');
-  $(this).toggleClass('selected');
+$dates.on('click', function(e){
+  $dates.children().removeClass('selected');
+  $(e.target).toggleClass('selected');
 });
 
 updateCalendar();
@@ -95,6 +96,7 @@ function updateCalendar() {
     //Create TD elements with classes for last month
     var $prevDate = $('<li>' + daysInLastMonth + '</li>');
     $prevDate.addClass('other-date');
+    addPrevMonthEvent($prevDate);
     $dates.prepend($prevDate);
     daysInLastMonth--;
   }
@@ -105,13 +107,23 @@ function updateCalendar() {
     $dates.append($currDate);
   }
 
-  console.log($dates.children().length%7);
+  function addNextMonthEvent(element) {
+    element.on('click', function(){
+      getNextMonth();
+    });
+  }
+  function addPrevMonthEvent(element) {
+    element.on('click', function(){
+      getPrevMonth();
+    });
+  }
 
   if ($dates.children().length%7 !== 0) {
     var extraDate = 1;
     while($dates.children().length%7 !== 0) {
       var $extraDate = $('<li>' + extraDate + '</li>');
       $extraDate.addClass('other-date');
+      addNextMonthEvent($extraDate);
       $dates.append($extraDate);
       extraDate++;
     }
@@ -119,8 +131,6 @@ function updateCalendar() {
 
   setMonthName();
   $year.text(year);
-
-  // console.log(startDate);
 }
 
 function getDaysInMonth(monthNum)  {
@@ -140,5 +150,5 @@ function getDaysInMonth(monthNum)  {
 }
 
 function isLeapYear() {
-  return false;
+  return ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0);
 }

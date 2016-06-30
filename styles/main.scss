@@ -1,15 +1,29 @@
 body {
-  background: #000;
+  background: #0092DF;
   color: #fff;
 }
 
 header {
   width: 80%;
-  margin: 0 auto;
+  margin: 10vh auto 5vh auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #fff;
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    font-weight: bold;
+    p {
+      padding: 0 10px;
+    }
+  }
+  button {
+    background: none;
+    border: none;
+    color: #fff;
+    outline: none;
+  }
 }
 
 p {
@@ -24,6 +38,7 @@ main {
     display: flex;
     width: 100%;
     text-align: center;
+    margin-bottom: 5vh;
     p {
       width: calc(100%/7);
     }
@@ -40,22 +55,21 @@ main {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: calc(100%/7);
-      height: 10vh;
+      width: calc(80vw/7);
+      height: 12vh;
       cursor: pointer;
       border: 1px solid rgba(0,0,0,0);
       box-sizing: border-box;
       margin: 0;
       &:hover {
-        color: #577513;
-        // border: 1px solid #577513;
+        background: rgba(0,0,0, 0.05);
       }
     }
     .other-date {
-      color: #4A4845;
+      color: #48B4F5;
     }
     .selected {
-      border: 1px solid #577513;
+      background: darken(#0092DF, 5%);
     }
   }
 }
