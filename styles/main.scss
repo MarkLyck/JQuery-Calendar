@@ -25,7 +25,7 @@ header {
     outline: none;
     cursor: pointer;
     &:hover {
-      color: #48B4F5;
+      color: darken(#0092DF,10%);
     }
   }
 }
@@ -70,7 +70,7 @@ main {
       }
     }
     .other-date {
-      color: #48B4F5;
+      color: darken(#0092DF,10%);
     }
     .selected {
       background: darken(#0092DF, 5%);
