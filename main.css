@@ -22,7 +22,7 @@ header {
     outline: none;
     cursor: pointer; }
     header button:hover {
-      color: #0071ac; }
+      color: #007bbb; }
 
 p {
   margin: 0;
@@ -60,7 +60,7 @@ main {
       main ul li:hover {
         background: rgba(0, 0, 0, 0.05); }
     main ul .other-date {
-      color: #0071ac; }
+      color: #007bbb; }
     main ul .selected {
       background: #0081c6; }
 
