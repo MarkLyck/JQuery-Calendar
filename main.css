@@ -19,7 +19,10 @@ header {
     background: none;
     border: none;
     color: #fff;
-    outline: none; }
+    outline: none;
+    cursor: pointer; }
+    header button:hover {
+      color: #48B4F5; }
 
 p {
   margin: 0;

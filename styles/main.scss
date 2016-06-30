@@ -23,6 +23,10 @@ header {
     border: none;
     color: #fff;
     outline: none;
+    cursor: pointer;
+    &:hover {
+      color: #48B4F5;
+    }
   }
 }
 
