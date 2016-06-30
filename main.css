@@ -47,6 +47,7 @@ main {
     margin: 0;
     padding: 0; }
     main ul li {
+      font-weight: bold;
       display: flex;
       align-items: center;
       justify-content: center;
